@@ -100,6 +100,17 @@ To get a local copy up and running follow these simple steps.
     <img src="images/usage-2.gif" alt="Logo">
 
     After the script has run, it will output the results to a file called `results.json`.
+3. Rename .env.example to .env and fill up details
+    ```php
+    S3_BUCKET="bucket"
+    S3_REGION="ap-southeast-1"
+    S3_ACCESS_KEY="accesskey"
+    S3_SECRET_KEY="secretkey"
+    ```
+4. (Optional) To enable upload results to an S3 Bucket, set $uploadToS3 to true
+    ```php
+    $uploadToS3 = true // caseyScraperPagination_v2:162 
+    ```
 
 ## License
 
