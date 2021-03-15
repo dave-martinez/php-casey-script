@@ -42,9 +42,6 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](images/usage-2.gif)
-
-
 A web scraper that fetches applications submitted on the website that was written in PHP, php-webdriver and Selenium.
 
 This is part of an interview assignment to demonstrate scripting and scraping knowledge.
