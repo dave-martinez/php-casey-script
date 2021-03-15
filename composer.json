@@ -1,6 +1,7 @@
 {
     "require": {
         "php-webdriver/webdriver": "^1.1",
-        "vlucas/phpdotenv": "^5.3"
+        "vlucas/phpdotenv": "^5.3",
+        "aws/aws-sdk-php": "~3.0"
     }
 }
