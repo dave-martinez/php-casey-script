@@ -159,7 +159,7 @@ function main() {
     $URL = 'https://eproperty.casey.vic.gov.au/T1PRProd/WebApps/eProperty/P1/eTrack/eTrackApplicationSearchResults.aspx?Field=S&Period=L7&r=P1.WEBGUEST&f=%24P1.ETR.SEARCH.SL7';
 
     try {
-        $uploadToS3 = true;
+        $uploadToS3 = false;
         runScript($SELENIUM_SERVER, $URL, $OUTPUT_FILENAME, $uploadToS3);
     } catch (Throwable $e) {
         $data = (object) ["code" => $e->getCode(), "message" => $e->getMessage(), "stackTrace" => $e->getTrace()];
