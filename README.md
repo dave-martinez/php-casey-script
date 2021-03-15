@@ -90,17 +90,19 @@ To get a local copy up and running follow these simple steps.
 
 ## Usage
 
-To run the script, first run selenium-driver
-```sh
-selenium-driver
-```
-Then run the php script
-```sh
-php caseyScraperPagination_v2
-```
+1. To run the script, first run selenium-driver
+    ```sh
+    selenium-driver
+    ```
+    <img src="images/usage-1.gif" alt="Logo">
 
-After the script has run, it will output the results to a file called `results.json`.
+2. Then run the php script
+    ```sh
+    php caseyScraperPagination_v2
+    ```
+    <img src="images/usage-2.gif" alt="Logo">
 
+    After the script has run, it will output the results to a file called `results.json`.
 
 ## License
 
