@@ -8,6 +8,14 @@ use Facebook\WebDriver\Remote\DesiredCapabilities;
 use Facebook\WebDriver\WebDriverBy;
 use Facebook\WebDriver\Chrome\ChromeOptions;
 
+
+// Load Environment Variables
+// Access via $_ENV['<variable>']
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+
+
 function getTableFromHTML($rawHTML) {
     $html = new simple_html_dom();
     $html->load($rawHTML);
