@@ -150,24 +150,30 @@ function runScript($seleniumServer, $websiteUrl, $outputName, $uploadToS3) {
     }
 }
 
-// Constants 
-$OUTPUT_FILENAME = 'results.json';
-$SELENIUM_SERVER = 'http://localhost:4444/wd/hub';
-$URL = 'https://eproperty.casey.vic.gov.au/T1PRProd/WebApps/eProperty/P1/eTrack/eTrackApplicationSearchResults.aspx?Field=S&Period=L7&r=P1.WEBGUEST&f=%24P1.ETR.SEARCH.SL7';
 
-try {
-    $uploadToS3 = false;
-    runScript($SELENIUM_SERVER, $URL, $OUTPUT_FILENAME, $uploadToS3);
-} catch (Throwable $e) {
-    $data = (object) ["code" => $e->getCode(), "message" => $e->getMessage(), "stackTrace" => $e->getTrace()];
-    $serializedJSON =  serializeToJSON($data);
-    $fp = fopen($OUTPUT_FILENAME, 'w');
-    fwrite($fp, $serializedJSON);
-    fclose($fp);
 
-    echo 'An error has occured: ' . PHP_EOL;
-    echo $e->getMessage();
+// Main Script
+function main() {
+    $OUTPUT_FILENAME = 'results.json';
+    $SELENIUM_SERVER = 'http://localhost:4444/wd/hub';
+    $URL = 'https://eproperty.casey.vic.gov.au/T1PRProd/WebApps/eProperty/P1/eTrack/eTrackApplicationSearchResults.aspx?Field=S&Period=L7&r=P1.WEBGUEST&f=%24P1.ETR.SEARCH.SL7';
+
+    try {
+        $uploadToS3 = true;
+        runScript($SELENIUM_SERVER, $URL, $OUTPUT_FILENAME, $uploadToS3);
+    } catch (Throwable $e) {
+        $data = (object) ["code" => $e->getCode(), "message" => $e->getMessage(), "stackTrace" => $e->getTrace()];
+        $serializedJSON =  serializeToJSON($data);
+        $fp = fopen($OUTPUT_FILENAME, 'w');
+        fwrite($fp, $serializedJSON);
+        fclose($fp);
+
+        echo 'An error has occured: ' . PHP_EOL;
+        echo $e->getMessage();
+    }
 }
+
+main();
 
 
 
