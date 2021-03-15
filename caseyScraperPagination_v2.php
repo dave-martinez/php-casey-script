@@ -156,7 +156,7 @@ function runScript($seleniumServer, $websiteUrl, $outputName, $uploadToS3) {
 function main() {
     $OUTPUT_FILENAME = 'results.json';
     $SELENIUM_SERVER = 'http://localhost:4444/wd/hub';
-    $URL = 'https://eproperty.casey.vic.gov.au/T1PRProd/WebApps/eProperty/P1/eTrack/eTrackApplicationSearchResults.aspx?Field=S&Period=L7&r=P1.WEBGUEST&f=%24P1.ETR.SEARCH.SL7';
+    $URL = 'https://eproperty.casey.vic.gov.au/T1PRProd/WebApps/eProperty/P1/eTrack/eTrackApplicationSearchResults.aspx?Field=S&Period=L14&r=P1.WEBGUEST&f=%24P1.ETR.SEARCH.SL14';
 
     try {
         $uploadToS3 = false;
