@@ -4,7 +4,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/dave-martinez/php-casey-script">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/usage-2.gif" alt="Logo">
   </a>
 
   <h3 align="center">PHP Casey Application Scraper</h3>
@@ -42,7 +42,7 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](images/usage-2.gif)
 
 
 A web scraper that fetches applications submitted on the website that was written in PHP, php-webdriver and Selenium.
