@@ -51,7 +51,6 @@ This is part of an interview assignment to demonstrate scripting and scraping kn
 * [Selenium](https://www.selenium.dev)
 * [PHP-WebDriver](https://github.com/php-webdriver/php-webdriver)
 * [PHP Simple HTML DOM Parser](https://simplehtmldom.sourceforge.io)
-* [PHP Simple HTML DOM Parser](https://simplehtmldom.sourceforge.io)
 * [Amazon S3](https://aws.amazon.com/s3/)
 
 
